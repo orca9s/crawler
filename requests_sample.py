@@ -3,7 +3,7 @@
 # 요청 결과를 response변수에 할당해서 stastus_code속성을 출력
 import requests
 
-response = requests.get('http://comic.naver.com/webtoon/weekdayList.nhn?week=')
+response = requests.get('http://comic.naver.com/webtoon/weekday.nhn')
 print(response.status_code)
 print(response.text)
 
