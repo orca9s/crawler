@@ -59,14 +59,10 @@ for index, tr in enumerate(tr_list[1:]):
 
     # 현재 tr의 첫 번쨰 td요소의 자식 a태그의 'href'속성값
     url_detail = tr.select_one('td:nth-of-type(1) > a').get('href')
-    query_string = parse.urlsplit(url_thumbnail).query
+    query_string = parse.urlsplit(url_detail).query
     query_dict = parse.parse_qs(query_string)
     no = query_dict['no'][0]
 
-    query_string = parse.urlsplit(url_detail).query
-    query_dict = parse.parse_qs(query_string)
-    # print(query_dict)
-    no = query_dict['no'][0]
 
     # 현재 tr의 두 번째 td요소의 자식 a요소의 내용
     title = tr.select_one('td:nth-of-type(2) > a').get_text(strip=True)
