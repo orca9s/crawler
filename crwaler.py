@@ -66,7 +66,7 @@ for index, tr in enumerate(tr_list[1:]):
     query_string = parse.urlsplit(url_detail).query
     query_dict = parse.parse_qs(query_string)
     # print(query_dict)
-    no = query_dict['no'][0
+    no = query_dict['no'][0]
 
     # 현재 tr의 두 번째 td요소의 자식 a요소의 내용
     title = tr.select_one('td:nth-of-type(2) > a').get_text(strip=True)
