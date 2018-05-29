@@ -88,3 +88,11 @@ class Epiosode:
         self.title = title
         self.rating = rating
         self.created_data = created_data
+
+class Webtoon:
+    def __init__(self, webtoon_id, title, author, description, episode_list):
+        self.webtoon_ide = webtoon_id
+        self.title = title
+        self.author = author
+        self.description = description
+        self.episode_list = list
