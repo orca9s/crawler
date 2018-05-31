@@ -41,8 +41,8 @@ class Episode:
 class Webtoon:
     def __init__(self, webtoon_id):
         self.webtoon_id = webtoon_id
-        # webtoon 속성 채우기 위해 webtoon_crawler() 실행
-        # webtoon_crawler 함수 결과 dict()
+        # webtoon 속성 채우기 위해 set_info() 실행
+        # set_info 함수 결과 dict()
         info = webtoon_crawler(webtoon_id)
         self.title = info['title']
         self.author = info['author']

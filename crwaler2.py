@@ -14,7 +14,7 @@ class Epiosode:
         self.created_data = created_data
 
     @property
-    def get_financial_statements(self):
+    def get_statements(self):
         if not os.path.exists(r'data/episode_list2.html'):
             payload = {'titleId': self.webtoon_id, 'no': self.no}
             r = requests.get('http://comic.naver.com/webtoon/list.nhn?', params=payload)
